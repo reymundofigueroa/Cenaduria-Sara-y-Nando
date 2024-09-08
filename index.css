@@ -23,7 +23,7 @@ html{
   font-size: 62.5%;
 }
 header .main-section {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./asets/JPG/fondo-principal.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/JPG/fondo-principal.jpg");
   background-size: cover;
   background-position: center;
   width: 100vw;
@@ -38,10 +38,10 @@ header .main-section {
   align-items: center;
 }
 .main-section-container .main-section-img{
-  width: 128px;
+  width: 160px;
 }
 .main-section-container .main-section-title{
-  font-size: 2.8rem;
+  font-size: 3rem;
   color: var(--white);
   font-family: var(--main-font);
   font-weight: 500;
@@ -50,13 +50,70 @@ header .main-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 8px;
-  width: 140px;
-  height: 30px;
+  margin-top: 28px;
+  width: 185px;
+  height: 42px;
   color: var(--white);
   background-color: var(--orange);
   font-family: var(--catenary-font);
-  font-size: 1.4rem;
-  font-weight: 400;
+  font-size: 1.6rem;
+  font-weight: 600;
   text-decoration: none;
+}
+
+/* Menú cards section */
+.menu-container{
+  display: flex;
+  flex-direction: column;
+  width: 100Vw;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.card{
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  margin: 16px 0;
+  width: 100%;
+  height: 185px;
+}
+.card .card-left-side{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 16px;
+}
+.card .card-left-side p{
+  font-family: var(--main-font);
+  font-size: 1.9rem;
+  font-weight: 500;;
+}
+.card .card-left-side ul{
+  margin: 4px 4px;
+  padding: 4px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+.card .card-left-side li{
+  font-size: 1.3rem;
+  text-decoration: none;
+  list-style: none;
+}
+.card .card-left-side span{
+  margin-top: 4px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: green;
+}
+.card .card-right-side{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card .card-right-side img{
+  
+  width: 80%;
+  height: 85%;
+  border-radius: 18px;
 }
