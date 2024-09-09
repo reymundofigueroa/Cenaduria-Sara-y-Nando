@@ -9,7 +9,7 @@ function createMenuCard(menuItem) {
   nameParagraph.textContent = menuItem.name;
 
   const flavorsList = document.createElement('ul');
-  flavorsList.classList.add('horizontal');
+  
   if (menuItem.flavors) {
     menuItem.flavors.forEach(flavor => {
       const flavorItem = document.createElement('li');
@@ -39,9 +39,6 @@ function createMenuCard(menuItem) {
 
   return cardContainer;
 }
-
-// Ejemplo de uso:
-
 
 const menuContainer = document.getElementById('cards-menu-container'); // Asegúrate de tener un elemento con el ID 'menu-container' en tu HTML
 menu.forEach(item => {
