@@ -40,8 +40,18 @@ function createMenuCard(menuItem) {
   return cardContainer;
 }
 
+
+
 const menuContainer = document.getElementById('cards-menu-container'); // Asegúrate de tener un elemento con el ID 'menu-container' en tu HTML
 menu.forEach(item => {
   const card = createMenuCard(item);
   menuContainer.appendChild(card);
 });
+
+function toggleDropDownMenu() {
+  const dropDownMenu = document.getElementById('drop-down-menu');
+  dropDownMenu.classList.toggle('none-visibility');
+}
+
+const hamButton = document.getElementById('ham-btn');
+hamButton.addEventListener('click', toggleDropDownMenu);

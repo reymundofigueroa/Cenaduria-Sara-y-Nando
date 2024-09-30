@@ -25,16 +25,19 @@ html{
 .none-visibility{
   display: none;
 }
-nav{
+#mobile-nav{
   position: absolute;
   display: flex;
+  top: 50px;
+  flex-direction: column;
   justify-content: end;
+  align-items: end;
   width: 100vw;
-  height: 100vh;
+  height: 95vh;
 }
-nav .drop-down-menu{
+#mobile-nav .drop-down-menu{
   width: 48vw;
-  height: 100vh;
+  height: 95vh;
   font-size: 1.6rem;
   font-family: var(--main-font);
   line-height: 44px;
@@ -48,7 +51,7 @@ nav .drop-down-menu{
 .drop-down-menu img{
   width: 80px;
 }
-nav .drop-down-menu .menu-content{
+#mobile-nav .drop-down-menu .menu-content{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -66,15 +69,27 @@ nav .drop-down-menu .menu-content{
   cursor: pointer;
 }
 .rate-us-container{
-  margin: 0 0 0 25px;
+  width: 100%;
+  height: 20px;
+  margin-bottom: 85px;
+  text-align: center;
 }
 .rate-us-container a{
   text-decoration: none;
   color: green;
   cursor: pointer;
 }
-nav .ham-btn{
-  margin: 4px 3px 0 0;
+#desktop-nav{
+  display: flex;
+  justify-content: end;
+  width: 100vw;
+  position: fixed;
+}
+#desktop-nav figure{  
+  height: 10vh;
+}
+#desktop-nav #ham-btn{
+  margin: 4px 18px 0 0;
   width: 45px;
 }
 header .main-section {
