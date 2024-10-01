@@ -25,6 +25,9 @@ html{
 .none-visibility{
   display: none;
 }
+header{
+  position: fixed;
+}
 #mobile-nav{
   position: absolute;
   display: flex;
@@ -36,7 +39,7 @@ html{
   height: 95vh;
 }
 #mobile-nav .drop-down-menu{
-  width: 48vw;
+  width: 300px;
   height: 95vh;
   font-size: 1.6rem;
   font-family: var(--main-font);
@@ -83,21 +86,22 @@ html{
   display: flex;
   justify-content: end;
   width: 100vw;
-  position: fixed;
+  height: 10vh;
 }
 #desktop-nav figure{  
   height: 10vh;
 }
 #desktop-nav #ham-btn{
+  position: relative;
   margin: 4px 18px 0 0;
   width: 45px;
 }
-header .main-section {
+main .main-section {
+  width: 100vw;
+  height: 420px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/JPG/fondo-principal.jpg");
   background-size: cover;
   background-position: center;
-  width: 100vw;
-  height: 38vh;
 }
 .main-section .main-section-container {
   display: flex;
@@ -108,6 +112,7 @@ header .main-section {
   align-items: center;
 }
 .main-section-container .main-section-img{
+  margin-top: 7vh;
   width: 160px;
 }
 .main-section-container .main-section-title{
@@ -116,7 +121,7 @@ header .main-section {
   font-family: var(--main-font);
   font-weight: 500;
 }
-.main-section-container .main-section-button{
+.button{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -189,8 +194,84 @@ header .main-section {
   align-items: center;
 }
 .card .card-right-side img{
-  
   width: 80%;
+  max-width: 170px;
   height: 85%;
   border-radius: 18px;
+}
+
+/* about us section */
+
+.about-us{
+  margin-top: 36px;
+  width: 100%;
+  
+}
+.about-us .images-container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.about-us figure {
+ 
+  margin: 45px 0 80px 0;
+  width: 100%;
+  max-width: 500px;
+  height: 400px;
+  position: relative;
+}
+
+.about-us figure .cocinera {
+  width: 70%;
+  height:70%;
+  right: 25%;
+  position: absolute;
+  object-fit: contain;
+  z-index: 2;
+}
+
+.about-us figure .comal {
+  width: 60%;
+  height: 60%;
+  top: 50%;
+  left: 35%;
+  position: absolute;
+  object-fit:contain;
+  z-index: 1;
+}
+.about-us .about-us-text-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-us-text-container h2{
+  padding: 10px 8px 28px 8px;
+  font-family: var(--main-font);
+  font-size: 2.6rem;
+  font-weight: 400;
+}
+.about-us-text-container p{
+  max-width: 390px;
+  margin: 0 10px 0 10px;
+  font-family: var(--tertiary-font);
+  font-size: 1.6rem;
+  line-height: 1.4;
+  color: var(--soft-black);
+}
+
+.about-us-know-more{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.about-us-know-more p{
+  max-width: 390px;
+  padding: 12px;
+  text-align: center;
+  color: #848f8f;
+  font-family: var(--catenary-font);
+  font-size: 2rem;
 }

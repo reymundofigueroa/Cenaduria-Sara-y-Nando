@@ -1,36 +1,32 @@
 function createMenuCard(menuItem) {
-  const cardContainer = document.createElement('div');
-  cardContainer.classList.add('card');
+  const { name, flavors, price, img } = menuItem;
 
-  const leftSide = document.createElement('div');
-  leftSide.classList.add('card-left-side');
+  const cardContainer = createElementWithClass('div', 'card');
+  const leftSide = createElementWithClass('div', 'card-left-side');
+  const rightSide = createElementWithClass('div', 'card-right-side');
 
   const nameParagraph = document.createElement('p');
-  nameParagraph.textContent = menuItem.name;
+  nameParagraph.textContent = name;
 
   const flavorsList = document.createElement('ul');
-  
-  if (menuItem.flavors) {
-    menuItem.flavors.forEach(flavor => {
+  if (flavors) {
+    flavors.forEach(flavor => {
       const flavorItem = document.createElement('li');
       flavorItem.textContent = flavor;
       flavorsList.appendChild(flavorItem);
     });
-  } 
+  }
 
   const priceSpan = document.createElement('span');
-  priceSpan.textContent = `MXN $${menuItem.price[0]}.00`;
+  priceSpan.textContent = `MXN $${price[0]}.00`;
 
   leftSide.appendChild(nameParagraph);
   leftSide.appendChild(flavorsList);
   leftSide.appendChild(priceSpan);
 
-  const rightSide = document.createElement('div');
-  rightSide.classList.add('card-right-side');
-
   const image = document.createElement('img');
-  image.src = menuItem.img;
-  image.alt = `imagen de ${menuItem.name}`;
+  image.src = img;
+  image.alt = `imagen de ${name}`;
 
   rightSide.appendChild(image);
 
@@ -40,13 +36,19 @@ function createMenuCard(menuItem) {
   return cardContainer;
 }
 
+function createElementWithClass(tag, className) {
+  const element = document.createElement(tag);
+  element.classList.add(className);
+  return element;
+}
 
-
-const menuContainer = document.getElementById('cards-menu-container'); // Asegúrate de tener un elemento con el ID 'menu-container' en tu HTML
+const menuContainer = document.getElementById('cards-menu-container');
+const fragment = document.createDocumentFragment();
 menu.forEach(item => {
   const card = createMenuCard(item);
-  menuContainer.appendChild(card);
+  fragment.appendChild(card);
 });
+menuContainer.appendChild(fragment);
 
 function toggleDropDownMenu() {
   const dropDownMenu = document.getElementById('drop-down-menu');
