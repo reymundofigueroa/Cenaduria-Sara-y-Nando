@@ -51,8 +51,15 @@ menu.forEach(item => {
 menuContainer.appendChild(fragment);
 
 function toggleDropDownMenu() {
+  const header = document.querySelector('header')
   const dropDownMenu = document.getElementById('drop-down-menu');
   dropDownMenu.classList.toggle('none-visibility');
+  if(dropDownMenu.classList.contains('none-visibility')){
+    header.style.zIndex = '800';
+  }else{
+    header.style.zIndex = '1100';
+  }
+  
 }
 
 const hamButton = document.getElementById('ham-btn');

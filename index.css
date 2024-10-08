@@ -24,10 +24,11 @@ html{
 }
 .none-visibility{
   display: none;
+  z-index: 900;
 }
 header{
   position: fixed;
-  z-index: 1000;
+  
 }
 #mobile-nav{
   position: absolute;
@@ -38,6 +39,7 @@ header{
   align-items: end;
   width: 100vw;
   height: 95vh;
+ 
 }
 #mobile-nav .drop-down-menu{
   width: 300px;
@@ -136,7 +138,7 @@ main .main-section {
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 1000;
 }
 
 /* Menú cards section */
@@ -383,4 +385,35 @@ h2{
 .delivery-section-apps-container a {
   cursor: pointer;
   z-index: 1003;
+}
+
+/* footer */
+footer {
+  position: relative;
+  background-color: #df4a00;
+  color: var(--pastel-green);
+  padding: 20px;
+  text-align: center;
+  font-size: 1.6rem;
+  font-family: var(--secondary-font);
+  font-weight: 400;
+  z-index: 1010;
+}
+footer a{
+  cursor: pointer;
+  
+}
+.footer-contacto, .footer-horario, .footer-redes, .footer-legales, .footer-menu {
+  margin-bottom: 20px;
+}
+
+.footer-contacto a, .footer-redes a, .footer-legales a, .footer-menu a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footer-contacto a:hover, .footer-redes a:hover, .footer-legales a:hover, .footer-menu a:hover {
+  text-decoration: underline;
 }
