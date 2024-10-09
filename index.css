@@ -22,9 +22,8 @@
 html{
   font-size: 62.5%;
 }
-.none-visibility{
+.inactive{
   display: none;
-  z-index: 900;
 }
 header{
   position: fixed;
@@ -39,7 +38,6 @@ header{
   align-items: end;
   width: 100vw;
   height: 95vh;
- 
 }
 #mobile-nav .drop-down-menu{
   width: 300px;
@@ -105,6 +103,7 @@ main .main-section {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/JPG/fondo-principal.jpg");
   background-size: cover;
   background-position: center;
+  
 }
 .main-section .main-section-container {
   display: flex;
@@ -138,7 +137,7 @@ main .main-section {
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 10;
 }
 
 /* Menú cards section */
@@ -160,9 +159,8 @@ h2{
 }
 .card{
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: minmax(220px, 340px) minmax(130px,200px);
   margin: 16px 0 0 12px;
-  width: 100%;
   height: 185px;
 }
 .card .card-left-side{
@@ -177,7 +175,7 @@ h2{
   font-weight: 500;;
 }
 .card .card-left-side ul{
-  margin: 4px 4px;
+  margin: 4px 0px;
   padding: 4px 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -211,7 +209,6 @@ h2{
 .about-us{
   margin-top: 36px;
   width: 100%;
-  
 }
 .about-us .images-container{
   display: flex;
@@ -219,7 +216,6 @@ h2{
   width: 100%;
 }
 .about-us figure {
- 
   margin: 45px 0 80px 0;
   width: 100%;
   max-width: 500px;
@@ -233,7 +229,6 @@ h2{
   right: 25%;
   position: absolute;
   object-fit: contain;
-  z-index: 2;
 }
 
 .about-us figure .comal {
@@ -243,7 +238,6 @@ h2{
   left: 35%;
   position: absolute;
   object-fit:contain;
-  z-index: 1;
 }
 .about-us .about-us-text-container{
   width: 100%;
@@ -339,8 +333,8 @@ h2{
   position: relative;
   color: var(--soft-black);
   font-family: var(--catenary-font);
-  z-index: 1010;
   cursor: pointer;
+  z-index: 10;
 }
 .seeYouSoon-section figure{
   display: flex;
@@ -384,7 +378,7 @@ h2{
 }
 .delivery-section-apps-container a {
   cursor: pointer;
-  z-index: 1003;
+  z-index: 10;
 }
 
 /* footer */
@@ -397,10 +391,10 @@ footer {
   font-size: 1.6rem;
   font-family: var(--secondary-font);
   font-weight: 400;
-  z-index: 1010;
 }
 footer a{
   cursor: pointer;
+  z-index: 10;
   
 }
 .footer-contacto, .footer-horario, .footer-redes, .footer-legales, .footer-menu {

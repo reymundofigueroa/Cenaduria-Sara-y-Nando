@@ -1,3 +1,16 @@
+// Variables y Selección de Elementos
+const menuContainer = document.getElementById('cards-menu-container');
+const fragment = document.createDocumentFragment();
+const hamButton = document.getElementById('ham-btn');
+
+// Funciones Utilitarias
+function createElementWithClass(tag, className) {
+  const element = document.createElement(tag);
+  element.classList.add(className);
+  return element;
+}
+
+// Funciones Principales
 function createMenuCard(menuItem) {
   const { name, flavors, price, img } = menuItem;
 
@@ -36,31 +49,34 @@ function createMenuCard(menuItem) {
   return cardContainer;
 }
 
-function createElementWithClass(tag, className) {
-  const element = document.createElement(tag);
-  element.classList.add(className);
-  return element;
+function toggleDropDownMenu() {
+  const header = document.querySelector('header');
+  const dropDownMenu = document.getElementById('drop-down-menu');
+  dropDownMenu.classList.toggle('inactive');
+
+  if (dropDownMenu.classList.contains('inactive')) {
+    header.style.zIndex = '1';
+  } else {
+    header.style.zIndex = '1100';
+  }
 }
 
-const menuContainer = document.getElementById('cards-menu-container');
-const fragment = document.createDocumentFragment();
+function closeDropDownMenuByOutClick(event) {
+  const dropDownMenu = document.getElementById('drop-down-menu');
+  const hamButton = document.getElementById('ham-btn');
+  const header = document.querySelector('header');
+  if (!dropDownMenu.contains(event.target) && !hamButton.contains(event.target)) {
+    dropDownMenu.classList.add('inactive');
+    header.style.zIndex = '1';
+  }
+}
+
+// Inicialización y Eventos
 menu.forEach(item => {
   const card = createMenuCard(item);
   fragment.appendChild(card);
 });
 menuContainer.appendChild(fragment);
 
-function toggleDropDownMenu() {
-  const header = document.querySelector('header')
-  const dropDownMenu = document.getElementById('drop-down-menu');
-  dropDownMenu.classList.toggle('none-visibility');
-  if(dropDownMenu.classList.contains('none-visibility')){
-    header.style.zIndex = '800';
-  }else{
-    header.style.zIndex = '1100';
-  }
-  
-}
-
-const hamButton = document.getElementById('ham-btn');
 hamButton.addEventListener('click', toggleDropDownMenu);
+document.addEventListener('click', closeDropDownMenuByOutClick);
