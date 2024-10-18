@@ -55,7 +55,7 @@ function toggleDropDownMenu() {
   dropDownMenu.classList.toggle('inactive');
 
   if (dropDownMenu.classList.contains('inactive')) {
-    header.style.zIndex = '1';
+    header.style.zIndex = '0';
   } else {
     header.style.zIndex = '1100';
   }

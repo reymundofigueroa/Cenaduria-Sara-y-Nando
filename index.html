@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Disfruta de la mejor comida mexicana en Cenaduría Sara y Nando. ¡Haz tu pedido en línea ahora!">
     <title>Cenaduría Sara y Nando</title>
+    <link rel="icon" href="./assets/logo-sin-fondo.ico" type="image/x-icon">
+</head>
     <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="large-screen.css" media="screen and (min-width: 701px)">
+
   </head>
   <body>
     <header>
@@ -13,6 +17,21 @@
         <figure>
           <img id="ham-btn" src="./assets/menu.svg" alt="Menú de navegación" />
         </figure>
+        <section id="desktop-nav-container">
+          <figure class="logo-desktop">
+            <a href="#main"><img src="./assets/PNG/logo-sin-fondo.png" alt="Logo de Cenaduría Sara y Nando"/></a>
+          </figure>
+          <div class="menu-desktop-container">
+            <menu>
+              <li><a href="#main">Inicio</a></li>
+              <li><a href="#cards-menu-container">Menú</a></li>
+              <li><a href="#about-us-section">Nuestra historia</a></li>
+              <li><a href="#opinions-section">Opiniones</a></li>
+              <li><a href="#seeYouSoon-section-id">Dirección</a></li>
+              <li><a href="#delivery-section-id">Has tu pedido</a></li>
+            </menu>
+          </div>
+        </section>
       </nav>
       <nav id="mobile-nav">
         <section id="drop-down-menu" class="inactive drop-down-menu">
@@ -50,7 +69,7 @@
           />
           <h1 class="main-section-title">COMIDA MEXICANA</h1>
           
-          <a href="https://www.ubereats.com/store/cenaduria-sara-y-nando/OI2ti3tSSXq_OIJmreAa1A?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMkF2LiUyMFRvYmFsYWJhJTIwMTc3MSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMkNoSUpmY0VxUEFfUFlwWVJnSzc3WF85azN5ZyUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJnb29nbGVfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0EtMzMuNDI5MjI3JTJDJTIybG9uZ2l0dWRlJTIyJTNBLTcwLjU4Nzg1MDQlN0Q=&utm_source=instagram" class="button">Cena con nosotros</a>
+          <a href="https://www.ubereats.com/store/cenaduria-sara-y-nando/OI2ti3tSSXq_OIJmreAa1A?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMkF2LiUyMFRvYmFsYWJhJTIwMTc3MSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMkNoSUpmY0VxUEFfUFlwWVJnSzc3WF85azN5ZyUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJnb29nbGVfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0EtMzMuNDI5MjI3JTJDJTIybG9uZ2l0dWRlJTIyJTNBLTcwLjU4Nzg1MDQlN0Q=&utm_source=instagram" target="_blank" class="button">Cena con nosotros</a>
         </div>
       </section>
       
@@ -128,7 +147,7 @@
               </div>
               <div class="seeYouSoon-content">
                 <p>Dirección del Restaurante</p>
-                <a href="https://maps.app.goo.gl/JztrTj99JqebKVq89" aria-label="Ver la dirección Calle Tecolotlán, #60. Col Jalisco, Tonalá en Google Maps">Calle Tecolotlán, #60. Col Jalisco, Tonalá</a>
+                <a href="https://maps.app.goo.gl/JztrTj99JqebKVq89"    target="_blank" aria-label="Ver la dirección Calle Tecolotlán, #60. Col Jalisco, Tonalá en Google Maps">Calle Tecolotlán, #60. Col Jalisco, Tonalá</a>
               </div>
             </div>
             <figure>
@@ -142,8 +161,8 @@
               <img src="./assets/PNG/logo-sin-fondo.png" alt="Imagen del logo de Cenaduría Sara y Nando">
           </figure>
           <figure class="delivery-section-apps-container">
-              <a href="https://www.ubereats.com/store/cenaduria-sara-y-nando/OI2ti3tSSXq_OIJmreAa1A?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMkF2LiUyMFRvYmFsYWJhJTIwMTc3MSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMkNoSUpmY0VxUEFfUFlwWVJnSzc3WF85azN5ZyUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJnb29nbGVfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0EtMzMuNDI5MjI3JTJDJTIybG9uZ2l0dWRlJTIyJTNBLTcwLjU4Nzg1MDQlN0Q=&utm_source=instagram"><img src="./assets/JPG/uber.jpg" alt="Imagen del logo de Uber Eats"></a>
-              <a href="/"><img src="./assets/JPG/didi.jpg" alt="Imagen del logo de DiDi Food"></a>
+              <a href="https://www.ubereats.com/store/cenaduria-sara-y-nando/OI2ti3tSSXq_OIJmreAa1A?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMkF2LiUyMFRvYmFsYWJhJTIwMTc3MSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMkNoSUpmY0VxUEFfUFlwWVJnSzc3WF85azN5ZyUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJnb29nbGVfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0EtMzMuNDI5MjI3JTJDJTIybG9uZ2l0dWRlJTIyJTNBLTcwLjU4Nzg1MDQlN0Q=&utm_source=instagram" target="_blank"><img src="./assets/JPG/uber.jpg" alt="Imagen del logo de Uber Eats"></a>
+              <a href="https://www.didi-food.com/es-MX/food/store/5764607688089272405/Cenadur%C3%ADa-Sara-y-Nando/?pl=eyJwb2lJZCI6IkNoSUowNnZCMzYyMktJUVJraWVpNWVuWjM1YyIsImRpc3BsYXlOYW1lIjoiVGVjb2xvdGzDoW4gNjAiLCJhZGRyZXNzIjoiSmFsaXNjbyBJViBTZWNjLCA0NTQxMiBUb25hbMOhLCBKYWwuLCBNw6l4aWNvIiwibGF0IjoyMC42ODI2NzY2LCJsbmciOi0xMDMuMjYwNjc5LCJzcmNUYWciOiJnb29nbGVfYXV0b2NvbXBsZXRlX2dnI2dvb2dsZV9nZW9jb2RlIiwicG9pU3JjVGFnIjoibWFudWFsX3N1ZyIsImNvb3JkaW5hdGVUeXBlIjoid2dzODQiLCJjaXR5SWQiOjUyMTQwNTAwLCJjaXR5IjoiR3VhZGFsYWphcmEiLCJzZWFyY2hJZCI6IjBhMGYxZjE3NjcxMWFjZjA2ZjZkZTBlNDBhNDc3YTAyIiwiYWRkcmVzc0FsbCI6IlRlY29sb3Rsw6FuIDYwLCBKYWxpc2NvIElWIFNlY2MsIDQ1NDEyIFRvbmFsw6EsIEphbC4sIE3DqXhpY28iLCJhZGRyZXNzQWxsRGlzcGxheSI6IkphbGlzY28gSVYgU2VjYywgNDU0MTIgVG9uYWzDoSwgSmFsLiwgTcOpeGljbyIsImNvdW50cnlDb2RlIjoiTVgiLCJjb3VudHJ5SWQiOjUyLCJkaXN0U3RyIjoiOTkra20iLCJkaXN0Ijo0NTI0NjAsInBvaVR5cGUiOiJwcmVtaXNlO2dlb2NvZGUiLCJjb3VudHlJZCI6NTIxNDA1MTAsImNvdW50eUdyb3VwSWQiOjUyMTQwNTAwMDAwMSwiYWlkIjoiIn0%3D#" target="_blank"><img src="./assets/JPG/didi.jpg" alt="Imagen del logo de DiDi Food"></a>
           </figure>
       </section>
       </main>
@@ -151,7 +170,7 @@
         <div class="footer-contacto">
           <a href="https://maps.app.goo.gl/JztrTj99JqebKVq89" aria-label="Ver la dirección Calle Tecolotlán, #60. Col Jalisco, Tonalá en Google Maps">Dirección: Calle Tecolotlán, #60. Col Jalisco, Tonalá</a>
           <a href="tel:+523312062435" aria-label="Llamar al número 331-206-2435">Tel: 331-206-2435</a>
-          <a href="mailto:cenaduria.sara.y.nando@gmail.com" aria-label="Enviar correo a cenaduria.sara.y.nando@gmail.com">cenaduria.sara.y.nando@gmail.com</a>
+          <a href="mailto:cenaduria.sara.y.nando@gmail.com" target="_blank" aria-label="Enviar correo a cenaduria.sara.y.nando@gmail.com">cenaduria.sara.y.nando@gmail.com</a>
         </div>
         <div class="footer-horario">
           <p>Horario de apertura:</p>
@@ -160,10 +179,6 @@
         </div>
         <div class="footer-redes">
           <a href="https://www.facebook.com/cenaduriasaraynando" target="_blank">Facebook</a>
-        </div>
-        <div class="footer-legales">
-          <a href="/politica-de-privacidad">Política de Privacidad</a>
-          <a href="/terminos-de-uso">Términos de Uso</a>
         </div>
         <div class="footer-menu">
           <a href="#cards-menu-container">Ver Menú</a>

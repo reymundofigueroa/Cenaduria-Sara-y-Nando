@@ -25,6 +25,9 @@ html{
 .inactive{
   display: none;
 }
+#desktop-nav-container{
+  display: none;
+}
 header{
   position: fixed;
   
@@ -33,10 +36,8 @@ header{
   position: absolute;
   display: flex;
   top: 50px;
-  flex-direction: column;
-  justify-content: end;
-  align-items: end;
-  width: 100vw;
+  left: calc(100vw - 300px);
+  width: 300px;
   height: 95vh;
 }
 #mobile-nav .drop-down-menu{
@@ -137,7 +138,7 @@ main .main-section {
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
-  z-index: 10;
+  z-index: 0;
 }
 
 /* Menú cards section */
