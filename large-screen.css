@@ -14,45 +14,60 @@
   --catenary-font: "Hanken Grotesk", sans-serif;
 }
 
-header #ham-btn{
+header #ham-btn {
   display: none;
 }
-header #mobile-nav{
+
+header #mobile-nav {
   display: none;
 }
 
 /* desktop nav */
-header{
+header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--pastel-green);
   z-index: 1000;
 }
-header #desktop-nav-container{
+
+header #desktop-nav {
+  display: flex;
+  justify-content: center;
+}
+
+header #desktop-nav-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
-  height: 50px;
-  background-color: var(--pastel-green);
-
+  width: 80%;
+  max-width: 1200px;
+  height: 100%;
 }
-header .logo-desktop{
+
+header .logo-desktop {
   justify-content: flex-start;
 }
-header .logo-desktop img{
+
+header .logo-desktop img {
   width: 50px;
 }
 
-menu{ 
+menu {
   display: flex;
   align-items: center;
   height: 50px;
   padding-right: 30px;
 }
-menu li{
+
+menu li {
   padding: 0 15px;
   font-size: 1.6rem;
   list-style: none;
 }
-menu li a{
+
+menu li a {
   color: var(--just-black);
   cursor: pointer;
   text-decoration: none;

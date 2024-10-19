@@ -14,25 +14,30 @@
   --catenary-font: "Hanken Grotesk", sans-serif;
 }
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-html{
+
+html {
   font-size: 62.5%;
 }
-.inactive{
+
+.inactive {
   display: none;
 }
-#desktop-nav-container{
+
+#desktop-nav-container {
   display: none;
 }
-header{
+
+header {
   position: fixed;
-  
+  z-index: 0;
 }
-#mobile-nav{
+
+#mobile-nav {
   position: absolute;
   display: flex;
   top: 50px;
@@ -40,7 +45,8 @@ header{
   width: 300px;
   height: 95vh;
 }
-#mobile-nav .drop-down-menu{
+
+#mobile-nav .drop-down-menu {
   width: 300px;
   height: 95vh;
   font-size: 1.6rem;
@@ -48,64 +54,77 @@ header{
   line-height: 44px;
   background-color: var(--pastel-pink);
 }
-.drop-down-menu .logo{
+
+.drop-down-menu .logo {
   display: flex;
   justify-content: center;
   margin: 8px 0 16px 0;
 }
-.drop-down-menu img{
+
+.drop-down-menu img {
   width: 80px;
 }
-#mobile-nav .drop-down-menu .menu-content{
+
+#mobile-nav .drop-down-menu .menu-content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 80vh;
 }
-.drop-down-menu .menu-content menu{
+
+.drop-down-menu .menu-content menu {
   margin-left: 16px;
 }
-.drop-down-menu .menu-content li{
+
+.drop-down-menu .menu-content li {
   list-style: none;
 }
-.menu-content li a{
+
+.menu-content li a {
   text-decoration: none;
   color: var(--soft-black);
   cursor: pointer;
 }
-.rate-us-container{
+
+.rate-us-container {
   width: 100%;
   height: 20px;
   margin-bottom: 85px;
   text-align: center;
 }
-.rate-us-container a{
+
+.rate-us-container a {
   text-decoration: none;
   color: green;
   cursor: pointer;
 }
-#desktop-nav{
+
+#desktop-nav {
   display: flex;
   justify-content: end;
   width: 100vw;
   height: 10vh;
 }
-#desktop-nav figure{  
+
+#desktop-nav figure {
   height: 10vh;
 }
-#desktop-nav #ham-btn{
+
+#desktop-nav #ham-btn {
   position: relative;
   margin: 4px 18px 0 0;
   width: 45px;
 }
+
 main .main-section {
   width: 100vw;
   height: 420px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/JPG/fondo-principal.jpg");
   background-size: cover;
   background-position: center;
-  
+
 }
+
 .main-section .main-section-container {
   display: flex;
   flex-direction: column;
@@ -114,17 +133,20 @@ main .main-section {
   justify-content: start;
   align-items: center;
 }
-.main-section-container .main-section-img{
+
+.main-section-container .main-section-img {
   margin-top: 7vh;
   width: 160px;
 }
-.main-section-container .main-section-title{
+
+.main-section-container .main-section-title {
   font-size: 3rem;
   color: var(--white);
   font-weight: 500;
   font-family: var(--main-font);
 }
-.button{
+
+.button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -142,7 +164,7 @@ main .main-section {
 }
 
 /* Menú cards section */
-.menu-container{
+.menu-container {
   display: flex;
   flex-direction: column;
   width: 100Vw;
@@ -151,54 +173,64 @@ main .main-section {
   align-items: center;
   background-color: var(--pastel-green);
 }
-h2{
+
+h2 {
   margin: 32px 0;
   text-align: center;
   font-family: var(--main-font);
   font-size: 2.6rem;
   font-weight: 400;
 }
-.card{
+
+.card {
   display: grid;
-  grid-template-columns: minmax(220px, 340px) minmax(130px,200px);
+  grid-template-columns: minmax(220px, 340px) minmax(130px, 200px);
   margin: 16px 0 0 12px;
   height: 185px;
 }
-.card .card-left-side{
+
+.card .card-left-side {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 16px;
 }
-.card .card-left-side p{
+
+.card .card-left-side p {
   font-family: var(--main-font);
   font-size: 1.9rem;
-  font-weight: 500;;
+  font-weight: 500;
+  ;
 }
-.card .card-left-side ul{
+
+.card .card-left-side ul {
   margin: 4px 0px;
   padding: 4px 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 
 }
-.card .card-left-side li{
+
+.card .card-left-side li {
   font-size: 1.3rem;
   text-decoration: none;
   list-style: none;
 }
-.card .card-left-side span{
+
+.card .card-left-side span {
   margin-top: 4px;
   font-size: 1.3rem;
   font-weight: 600;
   color: green;
 }
-.card .card-right-side{
+
+.card .card-right-side {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.card .card-right-side img{
+
+.card .card-right-side img {
   width: 80%;
   max-width: 170px;
   height: 85%;
@@ -207,15 +239,17 @@ h2{
 
 /* about us section */
 
-.about-us{
+.about-us {
   margin-top: 36px;
   width: 100%;
 }
-.about-us .images-container{
+
+.about-us .images-container {
   display: flex;
   justify-content: center;
   width: 100%;
 }
+
 .about-us figure {
   margin: 45px 0 80px 0;
   width: 100%;
@@ -226,7 +260,7 @@ h2{
 
 .about-us figure .cocinera {
   width: 70%;
-  height:70%;
+  height: 70%;
   right: 25%;
   position: absolute;
   object-fit: contain;
@@ -238,22 +272,25 @@ h2{
   top: 50%;
   left: 35%;
   position: absolute;
-  object-fit:contain;
+  object-fit: contain;
 }
-.about-us .about-us-text-container{
+
+.info-section-content {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.about-us-text-container h2{
+
+.about-us-text-container h2 {
   padding: 10px 8px 28px 8px;
   font-family: var(--main-font);
   font-size: 2.6rem;
   font-weight: 400;
 }
-.about-us-text-container p{
+
+.about-us-text-container p {
   max-width: 390px;
   margin: 0 10px 0 10px;
   font-family: var(--tertiary-font);
@@ -262,13 +299,14 @@ h2{
   color: var(--soft-black);
 }
 
-.about-us-know-more{
+.about-us-know-more {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
-.about-us-know-more p{
+
+.about-us-know-more p {
   max-width: 390px;
   padding: 12px;
   text-align: center;
@@ -279,7 +317,7 @@ h2{
 
 /* Opinions section */
 
-#opinions-section{
+#opinions-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -291,27 +329,30 @@ h2{
   background-color: var(--just-black);
 }
 
-.opinion-card{
+.opinion-card {
   max-width: 380px;
   height: 100%;
   margin: 36px 20px;
   font-size: 1.8rem;
 }
-.opinion-card span{
+
+.opinion-card span {
   font-size: 1.6rem;
 }
-.opinion-own{
+
+.opinion-own {
   margin: 12px 0;
   font-family: var(--main-font);
   font-weight: 500;
 }
-.opinion{
+
+.opinion {
   font-family: var(--catenary-font);
 }
 
 /* Nos vemos pronto section */
 
-.seeYouSoon-section{
+.seeYouSoon-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -319,30 +360,35 @@ h2{
   height: 100%;
 }
 
-.seeYouSoon-title{
+.seeYouSoon-title {
   text-align: center;
 }
-.seeYouSoon-content{
+
+.seeYouSoon-content {
   max-width: 380px;
   margin: 30px 18px;
   font-size: 1.6rem;
 }
+
 .seeYouSoon-content p {
   font-family: var(--main-font);
 }
-.seeYouSoon-content a{
+
+.seeYouSoon-content a {
   position: relative;
   color: var(--soft-black);
   font-family: var(--catenary-font);
   cursor: pointer;
   z-index: 10;
 }
-.seeYouSoon-section figure{
+
+.seeYouSoon-section figure {
   display: flex;
   justify-content: center;
   max-width: 385px;
 }
-.seeYouSoon-section figure img{
+
+.seeYouSoon-section figure img {
   width: 100%;
 }
 
@@ -355,28 +401,34 @@ h2{
   flex-direction: column;
   justify-content: center;
 }
+
 .delivery-section h2 {
   margin: 20px 0;
 }
+
 .delivery-section-logo-container {
   display: flex;
   justify-content: center;
   width: 100%;
   margin-bottom: 18px;
 }
+
 .delivery-section-logo-container img {
   max-width: 300px;
 }
+
 .delivery-section-apps-container {
   display: flex;
   justify-content: center;
   width: 100%;
   margin-bottom: 18px;
 }
+
 .delivery-section-apps-container img {
   max-width: 100px;
   margin: 12px 36px;
 }
+
 .delivery-section-apps-container a {
   cursor: pointer;
   z-index: 10;
@@ -393,22 +445,32 @@ footer {
   font-family: var(--secondary-font);
   font-weight: 400;
 }
-footer a{
+
+footer a {
   cursor: pointer;
   z-index: 10;
-  
+
 }
-.footer-contacto, .footer-horario, .footer-redes, .footer-legales, .footer-menu {
+
+.footer-contacto,
+.footer-horario,
+.footer-redes,
+.footer-menu {
   margin-bottom: 20px;
 }
 
-.footer-contacto a, .footer-redes a, .footer-legales a, .footer-menu a {
+.footer-contacto a,
+.footer-redes a,
+.footer-menu a {
   color: #fff;
   text-decoration: none;
   display: block;
   margin-bottom: 10px;
 }
 
-.footer-contacto a:hover, .footer-redes a:hover, .footer-legales a:hover, .footer-menu a:hover {
+.footer-contacto a:hover,
+.footer-redes a:hover,
+.footer-legales a:hover,
+.footer-menu a:hover {
   text-decoration: underline;
 }
