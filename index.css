@@ -116,7 +116,7 @@ header {
   width: 45px;
 }
 
-main .main-section {
+.main-section {
   width: 100vw;
   height: 420px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/JPG/fondo-principal.jpg");

@@ -1,6 +1,7 @@
 // Variables y Selección de Elementos
-const menuContainer = document.getElementById("cards-menu-container");
-const fragment = document.createDocumentFragment();
+const header = document.querySelector("header");
+const dropDownMenu = document.getElementById("drop-down-menu");
+const mobileNav = document.getElementById("mobile-nav");
 const hamButton = document.getElementById("ham-btn");
 const linkInicio = document.getElementById("link-inicio");
 const linkMenu = document.getElementById("link-menu");
@@ -8,57 +9,12 @@ const linkAboutUs = document.getElementById("link-about-us");
 const linkRates = document.getElementById("link-rates");
 const linkDirection = document.getElementById("link-direction");
 const linkDelivery = document.getElementById("link-delivery");
-// Funciones Utilitarias
-function createElementWithClass(tag, className) {
-  const element = document.createElement(tag);
-  element.classList.add(className);
-  return element;
-}
 
 // Funciones Principales
-function createMenuCard(menuItem) {
-  const { name, flavors, price, img } = menuItem;
-
-  const cardContainer = createElementWithClass("div", "card");
-  const leftSide = createElementWithClass("div", "card-left-side");
-  const rightSide = createElementWithClass("div", "card-right-side");
-
-  const nameParagraph = document.createElement("p");
-  nameParagraph.textContent = name;
-
-  const flavorsList = document.createElement("ul");
-  if (flavors) {
-    flavors.forEach((flavor) => {
-      const flavorItem = document.createElement("li");
-      flavorItem.textContent = flavor;
-      flavorsList.appendChild(flavorItem);
-    });
-  }
-
-  const priceSpan = document.createElement("span");
-  priceSpan.textContent = `MXN $${price[0]}.00`;
-
-  leftSide.appendChild(nameParagraph);
-  leftSide.appendChild(flavorsList);
-  leftSide.appendChild(priceSpan);
-
-  const image = document.createElement("img");
-  image.src = img;
-  image.alt = `imagen de ${name}`;
-
-  rightSide.appendChild(image);
-
-  cardContainer.appendChild(leftSide);
-  cardContainer.appendChild(rightSide);
-
-  return cardContainer;
-}
 
 function toggleDropDownMenu() {
-  const header = document.querySelector("header");
-  const dropDownMenu = document.getElementById("drop-down-menu");
   dropDownMenu.classList.toggle("inactive");
-
+  mobileNav.classList.toggle("inactive");
   if (dropDownMenu.classList.contains("inactive")) {
     header.style.zIndex = "0";
   } else {
@@ -67,24 +23,17 @@ function toggleDropDownMenu() {
 }
 
 function closeDropDownMenuByOutClick(event) {
-  const dropDownMenu = document.getElementById("drop-down-menu");
-  const hamButton = document.getElementById("ham-btn");
-  const header = document.querySelector("header");
   if (
     !dropDownMenu.contains(event.target) &&
     !hamButton.contains(event.target)
   ) {
     dropDownMenu.classList.add("inactive");
-    header.style.zIndex = "1";
+    mobileNav.classList.add("inactive");
+    header.style.zIndex = "0";
   }
 }
 
 // Inicialización y Eventos
-menu.forEach((item) => {
-  const card = createMenuCard(item);
-  fragment.appendChild(card);
-});
-menuContainer.appendChild(fragment);
 
 hamButton.addEventListener("click", toggleDropDownMenu);
 linkInicio.addEventListener("click", toggleDropDownMenu);
