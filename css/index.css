@@ -116,10 +116,10 @@ header {
   width: 45px;
 }
 
-main .main-section {
+.main-section {
   width: 100vw;
   height: 420px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/JPG/fondo-principal.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/JPG/fondo-principal.webp");
   background-size: cover;
   background-position: center;
 
@@ -160,7 +160,7 @@ main .main-section {
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
-  z-index: 0;
+  z-index: 10;
 }
 
 /* Menú cards section */
@@ -252,7 +252,7 @@ h2 {
 
 .about-us figure {
   margin: 45px 0 80px 0;
-  width: 100%;
+  width: 350px;
   max-width: 500px;
   height: 400px;
   position: relative;

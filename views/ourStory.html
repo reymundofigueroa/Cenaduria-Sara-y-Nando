@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Conoce sobre la historia del restaurante Cenaduría Sara y Nando">
-  <link rel="icon" href="./assets/logo-sin-fondo.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./index.css">
-  <link rel="stylesheet" href="./ourStory.css">
-  <link rel="stylesheet" href="large-screen.css" media="screen and (min-width: 751px)">
+  <link rel="icon" href="../assets/logo-sin-fondo.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/ourStory.css">
+  <link rel="stylesheet" href="../css/large-screen.css" media="screen and (min-width: 701px)">
+  <link rel="preload" as="image" href="../assets/JPG/san-luis-de-custique.webp">
 </head>
   <title>Nuestra Historia</title>
 </head>
@@ -15,22 +16,22 @@
   <header>
     <nav id="desktop-nav">
       <figure>
-        <img id="ham-btn" src="./assets/menu.svg" alt="Menú de navegación" />
+        <img id="ham-btn" src="../assets/menu.svg" alt="Menú de navegación" />
       </figure>
       <section id="desktop-nav-container">
         <figure class="logo-desktop">
-          <a href="./index.html"><img
-            src="./assets/PNG/logo-sin-fondo.png"
+          <a href="../views/index.html"><img
+            src="../assets/PNG/logo-sin-fondo.png"
             alt="Logo de Cenaduría Sara y Nando"
           /></a>
         </figure>
         <div class="menu-desktop-container">
           <menu>
-            <li><a href="./index.html">Inicio</a></li>
-            <li><a href="./index.html#cards-menu-container">Menú</a></li>
-            <li><a href="./index.html#opinions-section">Opiniones</a></li>
-            <li><a href="./index.html#seeYouSoon-section-id">Dirección</a></li>
-            <li><a href="./index.html#delivery-section-id">Has tu pedido</a></li>
+            <li><a href="../views/index.html">Inicio</a></li>
+            <li><a href="../views/index.html#cards-menu-container">Menú</a></li>
+            <li><a href="../views/index.html#opinions-section">Opiniones</a></li>
+            <li><a href="../views/index.html#seeYouSoon-section-id">Dirección</a></li>
+            <li><a href="../views/index.html#delivery-section-id">Has tu pedido</a></li>
           </menu>
         </div>
       </section>
@@ -39,20 +40,20 @@
       <section id="drop-down-menu" class="inactive drop-down-menu">
         <figure class="logo">
           <img
-            src="./assets/PNG/logo-sin-fondo.png"
+            src="../assets/PNG/logo-sin-fondo.png"
             alt="Logo de Cenaduría Sara y Nando"
           />
         </figure>
         <div class="menu-content">
           <div>
             <menu>
-              <li><a href="./index.html">Inicio</a></li>
+              <li><a href="../views/index.html">Inicio</a></li>
               <li><a id="link-beginnings" href="#beginnings">Nuestros inicios</a></li>
               <li><a id="link-amazing-places" href="#amazing">Lugares impresionantes</a></li>
-              <li><a href="./index.html#cards-menu-container">Menú</a></li>
-              <li><a href="./index.html#opinions-section">Opiniones</a></li>
-              <li><a href="./index.html#seeYouSoon-section-id">Dirección</a></li>
-              <li><a href="./index.html#delivery-section-id">Has tu pedido</a></li>
+              <li><a href="../views/index.html#cards-menu-container">Menú</a></li>
+              <li><a href="../views/index.html#opinions-section">Opiniones</a></li>
+              <li><a href="../views/index.html#seeYouSoon-section-id">Dirección</a></li>
+              <li><a href="../views/index.html#delivery-section-id">Has tu pedido</a></li>
             </menu>
           </div>
           <div class="rate-us-container">
@@ -63,7 +64,7 @@
     </nav>
   </header> 
   <main>
-    <section class="main-section-our-story">
+    <section class=" main-section-our-story">
       <h1>San Luis de Custique</h1>
     </section>
     <section id="beginnings" class="beginnings info-section-content"> 
@@ -76,7 +77,7 @@
         </p>
       </div>  
       <div>
-        <img src="./assets/PNG/nopales.png" alt="imagen de personas cosechando nopales">
+        <img src="../assets/PNG/nopales.png" alt="imagen de personas cosechando nopales" loading="lazy">
       </div>
     </section>
     <section id="amazing" class="amazing-places-container info-section-content" >
@@ -88,7 +89,7 @@
         </p>
       </div>
       <div class="img-container">
-        <img src="./assets/JPG/jesus-molcajete.jpg" alt="imágenes juntas de Sara en el molcajete mas grande del mundo y otra en el Jesucristo de Tabasco">
+        <img src="../assets/JPG/jesus-molcajete.webp" alt="imágenes juntas de Sara en el molcajete mas grande del mundo y otra en el Jesucristo de Tabasco" loading="lazy">
       </div>
     </section>
   </main>
@@ -110,6 +111,6 @@
       <a href="#cards-menu-container">Ver Menú</a>
     </div>
   </footer>
-  <script src="ourStory.js"></script>
+  <script src="../js/index.js"></script>
 </body>
 </html>

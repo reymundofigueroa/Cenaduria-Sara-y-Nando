@@ -1,7 +1,9 @@
 // Variables y Selección de Elementos
+const header = document.querySelector("header");
+const dropDownMenu = document.getElementById("drop-down-menu");
+const mobileNav = document.getElementById("mobile-nav");
 const hamButton = document.getElementById("ham-btn");
-const linkBeginnings = document.getElementById("link-beginnings");
-const linkAmazingPlaces = document.getElementById("link-amazing-places");
+const linkInicio = document.getElementById("link-inicio");
 const linkMenu = document.getElementById("link-menu");
 const linkAboutUs = document.getElementById("link-about-us");
 const linkRates = document.getElementById("link-rates");
@@ -9,11 +11,10 @@ const linkDirection = document.getElementById("link-direction");
 const linkDelivery = document.getElementById("link-delivery");
 
 // Funciones Principales
-function toggleDropDownMenu() {
-  const header = document.querySelector("header");
-  const dropDownMenu = document.getElementById("drop-down-menu");
-  dropDownMenu.classList.toggle("inactive");
 
+function toggleDropDownMenu() {
+  dropDownMenu.classList.toggle("inactive");
+  mobileNav.classList.toggle("inactive");
   if (dropDownMenu.classList.contains("inactive")) {
     header.style.zIndex = "0";
   } else {
@@ -22,25 +23,23 @@ function toggleDropDownMenu() {
 }
 
 function closeDropDownMenuByOutClick(event) {
-  const dropDownMenu = document.getElementById("drop-down-menu");
-  const hamButton = document.getElementById("ham-btn");
-  const header = document.querySelector("header");
   if (
     !dropDownMenu.contains(event.target) &&
     !hamButton.contains(event.target)
   ) {
     dropDownMenu.classList.add("inactive");
-    header.style.zIndex = "1";
+    mobileNav.classList.add("inactive");
+    header.style.zIndex = "0";
   }
 }
 
 // Inicialización y Eventos
+
 hamButton.addEventListener("click", toggleDropDownMenu);
-linkBeginnings.addEventListener("click", toggleDropDownMenu);
-linkAmazingPlaces.addEventListener("click", toggleDropDownMenu);
+document.addEventListener("click", closeDropDownMenuByOutClick);
+linkInicio.addEventListener("click", toggleDropDownMenu);
 linkMenu.addEventListener("click", toggleDropDownMenu);
 linkAboutUs.addEventListener("click", toggleDropDownMenu);
 linkRates.addEventListener("click", toggleDropDownMenu);
 linkDirection.addEventListener("click", toggleDropDownMenu);
 linkDelivery.addEventListener("click", toggleDropDownMenu);
-document.addEventListener("click", closeDropDownMenuByOutClick);
