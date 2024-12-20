@@ -36,10 +36,10 @@ function closeDropDownMenuByOutClick(event) {
 // Inicialización y Eventos
 
 hamButton.addEventListener("click", toggleDropDownMenu);
+document.addEventListener("click", closeDropDownMenuByOutClick);
 linkInicio.addEventListener("click", toggleDropDownMenu);
 linkMenu.addEventListener("click", toggleDropDownMenu);
 linkAboutUs.addEventListener("click", toggleDropDownMenu);
 linkRates.addEventListener("click", toggleDropDownMenu);
 linkDirection.addEventListener("click", toggleDropDownMenu);
 linkDelivery.addEventListener("click", toggleDropDownMenu);
-document.addEventListener("click", closeDropDownMenuByOutClick);
