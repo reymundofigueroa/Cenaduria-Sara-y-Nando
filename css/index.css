@@ -310,7 +310,7 @@ h2 {
   max-width: 390px;
   padding: 12px;
   text-align: center;
-  color: #848f8f;
+  color: var(--soft-black);
   font-family: var(--catenary-font);
   font-size: 2rem;
 }
